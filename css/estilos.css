@@ -1,0 +1,403 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: #db4865;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+header {
+  width: 100%;
+  height: 600px;
+  background: #FC5C7D;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(106, 130, 251, 0.39), rgba(252, 92, 124, 0.404)), url("../img/header.jpg");
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(106, 130, 251, 0.39), rgba(252, 92, 124, 0.404)), url("../img/header.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  position: relative;
+  /* Navegación */
+}
+header nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+header nav a {
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header .textos-header {
+  display: flex;
+  width: 100%;
+  height: 430px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+header .textos-header h1 {
+  font-size: 50px;
+  color: #fff;
+}
+header .textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+header .wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* About Us */
+.contenedor-sobre-nosotros {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contenedor-sobre-nosotros .imagen-sobre-nosotros {
+  width: 48%;
+}
+.contenedor-sobre-nosotros .contenido-textos {
+  width: 48%;
+}
+.contenedor-sobre-nosotros .contenido-textos h3 {
+  margin-bottom: 15px;
+}
+.contenedor-sobre-nosotros .contenido-textos h3 span {
+  background: #fc5a7a;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  margin-right: 5px;
+  text-align: center;
+}
+.contenedor-sobre-nosotros .contenido-textos p {
+  padding: 0px 0px 30px 30px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* Clientes*/
+.clientes {
+  background: #f2f2f2;
+}
+.clientes .galeria-port {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.clientes .galeria-port .imagen-port {
+  width: 24%;
+  margin-bottom: 10px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+.clientes .galeria-port .imagen-port img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.clientes .galeria-port .imagen-port .hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 1;
+  transform: scale(0);
+  background: #fc5a7a;
+  transition: transform 0.5s, opacity 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clientes .galeria-port .imagen-port .hover-galeria .ico {
+  width: 100px;
+  height: 100px;
+}
+.clientes .galeria-port .imagen-port .hover-galeria p {
+  color: #fff;
+}
+.clientes .galeria-port .imagen-port:hover .hover-galeria {
+  transform: scale(1);
+  opacity: 0.7;
+}
+
+/* Comentarios */
+.comentarios .cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.comentarios .cards .card {
+  background: rgba(252, 90, 122, 0.781);
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+.comentarios .cards .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+}
+.comentarios .cards .card .contenido-texto-card {
+  width: 60%;
+  color: #fff;
+}
+.comentarios .cards .card .contenido-texto-card p {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+/* Sobre nosotros */
+.about-services {
+  background: #f2f2f2;
+  padding-bottom: 30px;
+}
+.about-services .servicio-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-services .servicio-cont .servicio-ind {
+  width: 28%;
+  text-align: center;
+}
+.about-services .servicio-cont .servicio-ind img {
+  width: 90%;
+  position: relative;
+  border-top-left-radius: 35%;
+  border-bottom-right-radius: 25%;
+}
+.about-services .servicio-cont .servicio-ind h3 {
+  margin: 10px 0;
+}
+.about-services .servicio-cont .servicio-ind p {
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background: #414141;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+footer .contenedor-footer {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+footer .contenedor-footer .content-foo {
+  text-align: center;
+}
+footer .contenedor-footer .content-foo h4 {
+  color: #fff;
+  border-bottom: 3px solid #fc5a7a;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+footer .contenedor-footer .content-foo p {
+  color: #ccc;
+}
+footer .titulo-final {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  header {
+    background-position: top;
+    background-size: contain;
+    height: 500px;
+  }
+
+  /* Sobre nosotros */
+  .contenedor-sobre-nosotros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-sobre-nosotros .imagen-sobre-nosotros {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .contenedor-sobre-nosotros .contenido-textos {
+    width: 90%;
+  }
+
+  /* clientes */
+  .clientes .galeria-port .imagen-port {
+    width: 44%;
+  }
+
+  /* comentarios */
+  .comentarios .cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .comentarios .cards .card {
+    width: 90%;
+  }
+  .comentarios .cards .card:first-child {
+    margin-bottom: 30px;
+  }
+
+  /* .about-services */
+  .about-services .servicio-cont {
+    flex-direction: column;
+  }
+  .about-services .servicio-cont .servicio-ind {
+    width: 100%;
+    text-align: center;
+  }
+  .about-services .servicio-cont .servicio-ind:nth-child(1), .about-services .servicio-cont .servicio-ind:nth-child(2) {
+    margin-bottom: 60px;
+  }
+  .about-services .servicio-cont .servicio-ind p {
+    padding: 0px 30px;
+  }
+
+  /* footer*/
+  footer .contenedor-footer .content-foo {
+    text-align: center;
+    width: 25%;
+    overflow-wrap: anywhere;
+  }
+}
+@media screen and (max-width: 500px) {
+  .titulo {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  header {
+    height: 200px;
+  }
+  header nav {
+    text-align: center;
+    padding: 5px 0 0 0;
+  }
+  header nav a {
+    margin-right: 5px;
+    font-size: 10px;
+  }
+  header .textos-header {
+    height: 100px;
+  }
+  header .textos-header h1 {
+    font-size: 20px;
+  }
+  header .textos-header h2 {
+    font-size: 15px;
+  }
+  header .wave div {
+    height: 40px !important;
+  }
+
+  /* Sobre nosotros */
+  .contenedor {
+    padding: 0;
+  }
+  .contenedor .contenido-textos {
+    width: 95%;
+  }
+  .contenedor .contenido-textos h3 {
+    font-size: 1rem;
+  }
+  .contenedor .contenido-textos p {
+    padding: 0px 10px 20px 10px;
+  }
+
+  /* Clientes */
+  .clientes .galeria-port .imagen-port {
+    width: 95%;
+  }
+
+  /* Comentarios */
+  .comentarios .cards .card {
+    height: 350px;
+    flex-direction: column;
+  }
+  .comentarios .cards .card .contenido-texto-card {
+    text-align: justify;
+  }
+  .comentarios .cards .card .contenido-texto-card h4 {
+    text-align: center;
+  }
+
+  /* footer*/
+  footer .contenedor-footer {
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  footer .contenedor-footer .content-foo {
+    text-align: center;
+    width: 95%;
+  }
+  footer .contenedor-footer .content-foo h4 {
+    border: none;
+    margin-bottom: 0;
+  }
+  footer .contenedor-footer > :nth-child(2) {
+    border-top: 3px solid #fc5a7a;
+    border-bottom: 3px solid #fc5a7a;
+    margin: 15px 0;
+    padding: 20px 0;
+  }
+  footer .titulo-final {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
